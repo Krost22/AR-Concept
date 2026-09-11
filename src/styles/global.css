@@ -1013,6 +1013,14 @@ a {
   padding-top: var(--space-2);
 }
 
+.prepare__credits {
+  padding-top: var(--space-2);
+  font-size: 0.72rem;
+  line-height: 1.5;
+  color: var(--color-ink-faint);
+  text-align: center;
+}
+
 /* Compatibility card */
 
 .compatibility {
@@ -1430,6 +1438,13 @@ a {
   letter-spacing: 0.05em;
   color: var(--color-ink-faint);
   margin-bottom: 4px;
+}
+
+.ar-settings__credits {
+  margin-top: var(--space-4);
+  font-size: 0.72rem;
+  line-height: 1.5;
+  color: var(--color-ink-faint);
 }
 
 /* AR start */

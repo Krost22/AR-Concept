@@ -3,6 +3,7 @@ import { useFrame } from '@react-three/fiber'
 
 import { usePrefersReducedMotion } from '@/hooks/usePrefersReducedMotion'
 import type { SceneStatus } from '@/domain/ar/types'
+import { ModelAsset } from '../../assets/ModelAsset'
 import { SeaSurface } from '../../water/SeaSurface'
 import type { SceneProps } from '../types'
 import { useSceneCommands, useSceneStatus } from '../useSceneBridge'
@@ -18,6 +19,8 @@ import {
   shipVolleyOrigin,
 } from './timeline'
 
+const CASTLE_MODEL_SIZE = 14
+
 function startAttack(timeline: CastleTimeline, setPhase: (phase: CastlePhase) => void) {
   timeline.phase = 'approach'
   timeline.elapsed = 0
@@ -30,7 +33,7 @@ function stopAttack(timeline: CastleTimeline, setPhase: (phase: CastlePhase) => 
   setPhase('idle')
 }
 
-export function CastleScene({ bridge }: SceneProps) {
+export function CastleScene({ bridge, experience }: SceneProps) {
   const reducedMotion = usePrefersReducedMotion()
   const [phase, setPhase] = useState<CastlePhase>('idle')
   const timelineRef = useRef<CastleTimeline>({
@@ -89,39 +92,51 @@ export function CastleScene({ bridge }: SceneProps) {
 
   useSceneStatus(bridge, status)
 
+  const shipSrc = experience.model.assets?.pirateShip
+
   return (
     <group>
-      <SeaSurface size={80} segments={64} fadeStart={16} fadeEnd={30} />
+      <SeaSurface size={64} segments={64} fadeStart={10.5} fadeEnd={20} />
 
-      <CastleFort />
+      {experience.model.src ? (
+        <ModelAsset src={experience.model.src} size={CASTLE_MODEL_SIZE} />
+      ) : (
+        <CastleFort />
+      )}
 
       {SHIP_ROUTES.map((route) => (
-        <PirateShip key={route.id} route={route} phase={phase} timeline={timelineRef} />
+        <PirateShip
+          key={route.id}
+          route={route}
+          phase={phase}
+          timeline={timelineRef}
+          modelSrc={shipSrc}
+        />
       ))}
 
       {SHIP_ROUTES.map((route) => (
         <CannonVolley
           key={`ship-volley-${route.id}`}
           origin={shipVolleyOrigin(route)}
-          target={[0, 3.4, 0]}
+          target={[0, 3, 0]}
           timeline={timelineRef}
           fireOffset={route.fireOffset}
           interval={3}
           shots={5}
-          arcHeight={2.2}
-          travelTime={1.15}
+          arcHeight={1.8}
+          travelTime={1.1}
           scale={0.9}
         />
       ))}
 
       <CannonVolley
-        origin={[3.3, 3.6, 3.3]}
+        origin={[3, 3.1, 4.6]}
         target={fortVolleyTarget(SHIP_ROUTES[1])}
         timeline={timelineRef}
         fireOffset={1.4}
         interval={3.8}
         shots={4}
-        arcHeight={1.8}
+        arcHeight={1.6}
         travelTime={1.1}
         scale={0.85}
       />

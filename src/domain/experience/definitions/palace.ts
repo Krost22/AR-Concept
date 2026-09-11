@@ -1,4 +1,5 @@
 import type { ExperienceDefinition } from '../types'
+import { assetUrl } from '@/lib/assets'
 
 export const palaceExperience: ExperienceDefinition = {
   id: 'palacio-inquisicion',
@@ -8,8 +9,8 @@ export const palaceExperience: ExperienceDefinition = {
     'Explora uno de los edificios históricos más emblemáticos de Cartagena.',
   description:
     'Un recorrido arquitectónico por el antiguo Tribunal del Santo Oficio, hoy Museo Histórico de Cartagena. Coloca el edificio en tu entorno, gíralo para descubrir su portada barroca, sus balcones de madera y el patio de arcos que organiza todo el conjunto.',
-  coverImage: '/images/palacio-inquisicion.svg',
-  heroImage: '/images/palacio-inquisicion.svg',
+  coverImage: assetUrl('images/palacio-inquisicion.svg'),
+  heroImage: assetUrl('images/palacio-inquisicion.svg'),
   location: 'Plaza de Bolívar, Centro Histórico, Cartagena de Indias',
   era: 'Siglo XVIII',
   durationMinutes: 10,
@@ -21,26 +22,15 @@ export const palaceExperience: ExperienceDefinition = {
   ],
   scene: 'palace-exploration',
   model: {
-    src: undefined,
-    attribution: 'Modelo procedural de demostración',
+    src: assetUrl('models/palacio-inquisicion.glb'),
+    attribution: 'Modelo generado con Tripo AI.',
   },
   animations: [
     {
-      id: 'breeze',
-      label: 'Brisa y palmeras',
-      description: 'Las palmeras del patio se mueven con la brisa caribeña.',
-      trigger: 'auto',
-    },
-    {
-      id: 'fountain',
-      label: 'Fuente del patio',
-      description: 'El agua de la fuente se ondula y refleja la luz del atardecer.',
-      trigger: 'auto',
-    },
-    {
       id: 'points',
       label: 'Puntos históricos',
-      description: 'Marcadores flotantes que puedes tocar para conocer cada detalle.',
+      description:
+        'Marcadores flotantes que puedes tocar para descubrir la portada, los balcones, el claustro y el patio.',
       trigger: 'manual',
     },
   ],

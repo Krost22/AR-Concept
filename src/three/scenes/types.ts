@@ -1,7 +1,9 @@
 import type { SceneBridge } from '@/domain/ar/types'
+import type { ExperienceDefinition } from '@/domain/experience/types'
 
 export interface SceneProps {
   bridge: SceneBridge
+  experience: ExperienceDefinition
   quality?: 'high' | 'low'
 }
 

@@ -1,4 +1,5 @@
 import type { ExperienceDefinition } from '../types'
+import { assetUrl } from '@/lib/assets'
 
 export const castleExperience: ExperienceDefinition = {
   id: 'castillo-san-felipe',
@@ -8,8 +9,8 @@ export const castleExperience: ExperienceDefinition = {
     'Descubre la fortaleza y revive una escena de la Cartagena colonial.',
   description:
     'La mayor fortificación construida por España en América. Recorre sus bastiones y observa cómo la flota enemiga se aproxima durante el asedio de 1741, en una reconstrucción histórica serena y detallada.',
-  coverImage: '/images/castillo-san-felipe.svg',
-  heroImage: '/images/castillo-san-felipe.svg',
+  coverImage: assetUrl('images/castillo-san-felipe.svg'),
+  heroImage: assetUrl('images/castillo-san-felipe.svg'),
   location: 'Cerro de San Lázaro, Cartagena de Indias',
   era: 'Siglos XVII – XVIII',
   durationMinutes: 12,
@@ -21,20 +22,18 @@ export const castleExperience: ExperienceDefinition = {
   ],
   scene: 'castle-siege',
   model: {
-    src: undefined,
-    attribution: 'Modelo procedural de demostración',
+    src: assetUrl('models/castillo-san-felipe.glb'),
+    assets: {
+      pirateShip: assetUrl('models/pirate-ship.glb'),
+    },
+    attribution:
+      'Castillo: modelo generado con Tripo AI. Barco pirata: «Pirate Ship», de Oleg Muzyka (Sketchfab), CC BY 4.0.',
   },
   animations: [
     {
       id: 'sea',
       label: 'Mar en movimiento',
-      description: 'Oleaje suave alrededor de la isla durante toda la experiencia.',
-      trigger: 'auto',
-    },
-    {
-      id: 'flags',
-      label: 'Banderas al viento',
-      description: 'Los estandartes del castillo y de la flota ondean con la brisa.',
+      description: 'Oleaje suave alrededor de la fortaleza durante toda la experiencia.',
       trigger: 'auto',
     },
     {

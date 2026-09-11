@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 
 import { useNavigation } from '@/app/navigation/NavigationContext'
+import { useProgress } from '@react-three/drei'
 import { Button } from '@/components/ui/Button'
 import { StateMessage } from '@/components/ui/Feedback'
 import type {
@@ -273,6 +274,8 @@ export function ARScreen({ experienceId, initialMode = 'auto' }: ARScreenProps) 
   const secondaryControls = controls.filter((control) => control !== primaryControl)
   const modeMeta = mode ? MODE_META[mode] : MODE_META.studio
   const statusLabel = placement === 'placing' ? 'Colocando la escena' : sceneStatus.label
+  const { active: assetsLoading, progress: assetsProgress } = useProgress()
+  const showLoader = (!sceneReady || assetsLoading) && !error
 
   const chrome = experience ? (
     <div className="ar-chrome">
@@ -399,7 +402,15 @@ export function ARScreen({ experienceId, initialMode = 'auto' }: ARScreenProps) 
         />
       )}
 
-      {!sceneReady && !error ? <ARLoadingOverlay label="Preparando la escena…" /> : null}
+      {showLoader ? (
+        <ARLoadingOverlay
+          label={
+            assetsLoading
+              ? `Cargando modelos 3D… ${Math.round(assetsProgress)}%`
+              : 'Preparando la escena…'
+          }
+        />
+      ) : null}
 
       {error ? (
         <ARErrorOverlay

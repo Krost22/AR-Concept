@@ -114,6 +114,10 @@ export function ARSettingsSheet({
           </Button>
         ) : null}
       </div>
+
+      {experience.model.attribution ? (
+        <p className="ar-settings__credits">{experience.model.attribution}</p>
+      ) : null}
     </Sheet>
   )
 }

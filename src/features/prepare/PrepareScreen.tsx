@@ -154,6 +154,10 @@ export function PrepareScreen({ experienceId }: PrepareScreenProps) {
           Información histórica
         </Button>
       </div>
+
+      {experience.model.attribution ? (
+        <p className="prepare__credits">{experience.model.attribution}</p>
+      ) : null}
     </main>
   )
 }

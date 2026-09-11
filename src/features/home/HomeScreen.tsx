@@ -1,6 +1,7 @@
 import { useNavigation } from '@/app/navigation/NavigationContext'
 import { Icon } from '@/components/ui/Icons'
 import { getAllExperiences } from '@/domain/experience/registry'
+import { assetUrl } from '@/lib/assets'
 import { ExperienceCard } from './ExperienceCard'
 
 export function HomeScreen() {
@@ -24,7 +25,7 @@ export function HomeScreen() {
       <section className="home__hero" aria-labelledby="home-hero-title">
         <img
           className="home__hero-image"
-          src="/images/hero-cartagena.svg"
+          src={assetUrl('images/hero-cartagena.svg')}
           alt="Ilustración del centro histórico de Cartagena de Indias al atardecer"
         />
         <div className="home__hero-overlay">

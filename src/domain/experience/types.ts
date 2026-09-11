@@ -71,6 +71,7 @@ export interface ExperienceHighlight {
 
 export interface ExperienceModelConfig {
   src?: string
+  assets?: Record<string, string>
   attribution?: string
 }
 
