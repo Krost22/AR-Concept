@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 640" role="img" aria-label="Ilustración del Palacio de la Inquisición de Cartagena">
+  <defs>
+    <linearGradient id="palaceSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2b6076"/>
+      <stop offset="0.45" stop-color="#88a5a4"/>
+      <stop offset="0.78" stop-color="#ecc08a"/>
+      <stop offset="1" stop-color="#f8dcae"/>
+    </linearGradient>
+    <linearGradient id="palaceWall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f7efdd"/>
+      <stop offset="1" stop-color="#e2d0b0"/>
+    </linearGradient>
+    <linearGradient id="palaceShade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#dcc7a4"/>
+      <stop offset="1" stop-color="#c6ab84"/>
+    </linearGradient>
+    <linearGradient id="palaceStreet" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e7d3ae"/>
+      <stop offset="1" stop-color="#cdb28a"/>
+    </linearGradient>
+    <radialGradient id="palaceSun" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fff1cc"/>
+      <stop offset="1" stop-color="#ffd88f" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="900" height="640" fill="url(#palaceSky)"/>
+  <circle cx="180" cy="210" r="120" fill="url(#palaceSun)"/>
+  <circle cx="180" cy="210" r="42" fill="#ffe9b8"/>
+
+  <g fill="#f8ddb2" opacity="0.5">
+    <path d="M480 110c28-18 68-16 94 2 16-10 40-9 52 6-44 6-112 8-146-8z"/>
+    <path d="M120 90c20-14 50-12 68 2 12-7 30-6 38 5-32 4-84 5-106-7z"/>
+  </g>
+
+  <rect y="470" width="900" height="170" fill="url(#palaceStreet)"/>
+  <path d="M0 470h900v10H0z" fill="#b39a74" opacity="0.7"/>
+  <g stroke="#bda278" stroke-width="2" opacity="0.65">
+    <path d="M40 540h820M40 590h820"/>
+    <path d="M160 470v170M420 470v170M700 470v170"/>
+  </g>
+
+  <g>
+    <path d="M120 470V210h660v260z" fill="url(#palaceWall)"/>
+    <path d="M660 470V210h120v260z" fill="url(#palaceShade)" opacity="0.55"/>
+    <path d="M104 210h692v26H104z" fill="#c9a878"/>
+    <path d="M120 210l24-30h612l24 30z" fill="#b4553c"/>
+    <path d="M144 180h612l-16-22H160z" fill="#a54a34"/>
+
+    <path d="M96 330h708v18H96z" fill="#c9a878"/>
+    <path d="M96 344h708v6H96z" fill="#b08f5f"/>
+  </g>
+
+  <g>
+    <path d="M180 470v-58a34 34 0 0 1 68 0v58z" fill="#3d5a66"/>
+    <path d="M300 470v-58a34 34 0 0 1 68 0v58z" fill="#3d5a66"/>
+    <path d="M420 470v-58a34 34 0 0 1 68 0v58z" fill="#34505c"/>
+    <path d="M540 470v-58a34 34 0 0 1 68 0v58z" fill="#3d5a66"/>
+    <path d="M660 470v-58a34 34 0 0 1 68 0v58z" fill="#3d5a66"/>
+    <g fill="#f7efdd">
+      <path d="M156 470v-70h10v70zM260 470v-70h10v70zM376 470v-70h10v70zM496 470v-70h10v70zM616 470v-70h10v70zM736 470v-70h10v70z"/>
+    </g>
+    <path d="M148 400h724v14H148z" fill="#d9c09a"/>
+  </g>
+
+  <g>
+    <path d="M150 258h96v30h-96zM330 258h96v30h-96zM510 258h96v30h-96zM690 258h96v30h-96z" fill="#3f5b67"/>
+    <g fill="#8a6540">
+      <rect x="144" y="288" width="108" height="10" rx="3"/>
+      <rect x="324" y="288" width="108" height="10" rx="3"/>
+      <rect x="504" y="288" width="108" height="10" rx="3"/>
+      <rect x="684" y="288" width="108" height="10" rx="3"/>
+      <g>
+        <rect x="152" y="296" width="6" height="54"/><rect x="176" y="296" width="6" height="54"/>
+        <rect x="200" y="296" width="6" height="54"/><rect x="224" y="296" width="6" height="54"/>
+        <rect x="240" y="330" width="12" height="20" rx="6"/>
+      </g>
+      <g>
+        <rect x="332" y="296" width="6" height="54"/><rect x="356" y="296" width="6" height="54"/>
+        <rect x="380" y="296" width="6" height="54"/><rect x="404" y="296" width="6" height="54"/>
+        <rect x="420" y="330" width="12" height="20" rx="6"/>
+      </g>
+      <g>
+        <rect x="512" y="296" width="6" height="54"/><rect x="536" y="296" width="6" height="54"/>
+        <rect x="560" y="296" width="6" height="54"/><rect x="584" y="296" width="6" height="54"/>
+        <rect x="600" y="330" width="12" height="20" rx="6"/>
+      </g>
+      <g>
+        <rect x="692" y="296" width="6" height="54"/><rect x="716" y="296" width="6" height="54"/>
+        <rect x="740" y="296" width="6" height="54"/><rect x="764" y="296" width="6" height="54"/>
+        <rect x="780" y="330" width="12" height="20" rx="6"/>
+      </g>
+    </g>
+  </g>
+
+  <g>
+    <path d="M416 210h68v-34h-68z" fill="#c9a878"/>
+    <path d="M404 176h92l-46-40z" fill="#c9a878"/>
+    <circle cx="450" cy="152" r="10" fill="#d9a94e"/>
+    <path d="M450 142v-14" stroke="#5c4630" stroke-width="4"/>
+  </g>
+
+  <g>
+    <path d="M40 470V330c0-44 34-78 78-78h14v218z" fill="#4d7239"/>
+    <path d="M132 320c14-60 8-116-10-160l10-4c22 46 28 108 14 166z" fill="#3f6230"/>
+    <g stroke="#3f6230" stroke-width="7" stroke-linecap="round" fill="none">
+      <path d="M134 176c-24-14-40-34-46-56"/>
+      <path d="M134 184c-30-6-52-20-64-40"/>
+      <path d="M134 192c-26 2-50-2-70-14"/>
+      <path d="M136 170c20-12 34-30 40-50"/>
+      <path d="M136 180c26-4 46-16 58-34"/>
+      <path d="M136 190c24 2 46 0 62-10"/>
+    </g>
+  </g>
+
+  <g>
+    <path d="M840 470V350c0-40 30-72 70-72v192z" fill="#4d7239"/>
+    <path d="M872 360c12-50 6-96-8-132l9-3c18 38 22 90 12 138z" fill="#3f6230"/>
+    <g stroke="#3f6230" stroke-width="6" stroke-linecap="round" fill="none">
+      <path d="M874 240c-20-12-34-28-40-46"/>
+      <path d="M874 248c-26-4-44-16-54-34"/>
+      <path d="M874 256c-22 2-42-2-58-12"/>
+      <path d="M876 234c16-10 28-26 34-44"/>
+      <path d="M876 244c22-4 40-14 50-30"/>
+    </g>
+  </g>
+
+  <g>
+    <rect x="772" y="380" width="10" height="90" fill="#3d3d3d"/>
+    <path d="M764 372h26l-4-16h-18z" fill="#2f2f2f"/>
+    <circle cx="777" cy="382" r="10" fill="#ffdf9a" opacity="0.95"/>
+    <circle cx="777" cy="382" r="26" fill="#ffdf9a" opacity="0.2"/>
+  </g>
+
+  <g stroke="#c9b48e" stroke-width="2" opacity="0.6" fill="none">
+    <path d="M120 520h660" stroke-dasharray="10 12"/>
+  </g>
+</svg>
